@@ -13,6 +13,11 @@
 		D02C7D9723EBAF7A0043FC7E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C7D9523EBAF7A0043FC7E /* Main.storyboard */; };
 		D02C7D9923EBAF860043FC7E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D02C7D9823EBAF860043FC7E /* Assets.xcassets */; };
 		D02C7D9C23EBAF860043FC7E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D02C7D9A23EBAF860043FC7E /* LaunchScreen.storyboard */; };
+		D02F522E23FA7E780007821D /* summer-mountain1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02F522D23FA7E780007821D /* summer-mountain1.mp3 */; };
+		D02F523023FA82690007821D /* wave1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02F522F23FA82680007821D /* wave1.mp3 */; };
+		D02F523623FA88530007821D /* spring-mountain1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02F523523FA88530007821D /* spring-mountain1.mp3 */; };
+		D02F523823FA893B0007821D /* explosion3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D02F523723FA893A0007821D /* explosion3.mp3 */; };
+		D039225823EBB71000D01DDF /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = D039225723EBB71000D01DDF /* GameScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		D02C7D9823EBAF860043FC7E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D02C7D9B23EBAF860043FC7E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D02C7D9D23EBAF860043FC7E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D02F522D23FA7E780007821D /* summer-mountain1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "summer-mountain1.mp3"; sourceTree = "<group>"; };
+		D02F522F23FA82680007821D /* wave1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = wave1.mp3; sourceTree = "<group>"; };
+		D02F523523FA88530007821D /* spring-mountain1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "spring-mountain1.mp3"; path = "../../../Downloads/spring-mountain1.mp3"; sourceTree = "<group>"; };
+		D02F523723FA893A0007821D /* explosion3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = explosion3.mp3; sourceTree = "<group>"; };
+		D039225723EBB71000D01DDF /* GameScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,9 +68,14 @@
 			children = (
 				D02C7D8F23EBAF7A0043FC7E /* AppDelegate.swift */,
 				D02C7D9123EBAF7A0043FC7E /* SceneDelegate.swift */,
+				D039225723EBB71000D01DDF /* GameScene.swift */,
 				D02C7D9323EBAF7A0043FC7E /* ViewController.swift */,
 				D02C7D9523EBAF7A0043FC7E /* Main.storyboard */,
 				D02C7D9823EBAF860043FC7E /* Assets.xcassets */,
+				D02F522F23FA82680007821D /* wave1.mp3 */,
+				D02F523723FA893A0007821D /* explosion3.mp3 */,
+				D02F522D23FA7E780007821D /* summer-mountain1.mp3 */,
+				D02F523523FA88530007821D /* spring-mountain1.mp3 */,
 				D02C7D9A23EBAF860043FC7E /* LaunchScreen.storyboard */,
 				D02C7D9D23EBAF860043FC7E /* Info.plist */,
 			);
@@ -125,9 +140,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D02F523823FA893B0007821D /* explosion3.mp3 in Resources */,
+				D02F523623FA88530007821D /* spring-mountain1.mp3 in Resources */,
 				D02C7D9C23EBAF860043FC7E /* LaunchScreen.storyboard in Resources */,
+				D02F522E23FA7E780007821D /* summer-mountain1.mp3 in Resources */,
 				D02C7D9923EBAF860043FC7E /* Assets.xcassets in Resources */,
 				D02C7D9723EBAF7A0043FC7E /* Main.storyboard in Resources */,
+				D02F523023FA82690007821D /* wave1.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,6 +159,7 @@
 			files = (
 				D02C7D9423EBAF7A0043FC7E /* ViewController.swift in Sources */,
 				D02C7D9023EBAF7A0043FC7E /* AppDelegate.swift in Sources */,
+				D039225823EBB71000D01DDF /* GameScene.swift in Sources */,
 				D02C7D9223EBAF7A0043FC7E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -294,7 +314,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kentaro.shibayama.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -312,7 +332,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.techacademy.kentaro.shibayama.FlappyBird;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
