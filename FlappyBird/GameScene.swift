@@ -256,22 +256,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             scoreNode.physicsBody?.isDynamic = false
             scoreNode.physicsBody?.categoryBitMask = self.scoreCategory
             scoreNode.physicsBody?.contactTestBitMask = self.birdCategory
-            /* // Pointスコアアップ用のノード
-             let pointNode = SKNode()
-             //ランダム値生成
-             let random_p_range=self.frame.size.height
-             let random_po_range=self.frame.size.width
-             // 0〜random_y_rangeまでのランダム値を生成
-             let random_p = CGFloat.random(in: 0..<random_p_range)
-             let random_po=CGFloat.random(in: 0..<random_po_range)
-             // Y軸の下限にランダムな値を足して、下の壁のY座標を決定
-             pointNode.position = CGPoint(x:  random_po, y: random_p)
-             pointNode.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: self.frame.size.width/40, height: self.frame.size.height/30))
-             scoreNode.physicsBody?.isDynamic = false
-             scoreNode.physicsBody?.categoryBitMask = self.scoreCategory
-             scoreNode.physicsBody?.contactTestBitMask = self.birdCategory
-             
-             wall.addChild(pointNode) */
+            
             wall.addChild(scoreNode)
             wall.run(wallAnimation)
             
@@ -320,12 +305,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     }
     
     func setupPoint() {
-        // pointの画像を読み込む
-       // let pointTexture = SKTexture()
-       //pointTexture.filteringMode = .linear
-      
-
-        
         // wallTextureを取得
         let wallTexture = SKTexture(imageNamed: "wall")
         
@@ -364,7 +343,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             // pointを作成
             let points = SKSpriteNode(imageNamed: "IMG_AD2A5466ACF7-1")
             points.position = CGPoint(x: random_po, y: random_p)
-            points.size=CGSize(width: points.size.width/8, height: points.size.height/8)
+            points.size = CGSize(width: points.size.width / 8, height: points.size.height / 8)
             
             point.addChild(points)
             
@@ -375,14 +354,6 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             points.physicsBody?.contactTestBitMask = self.birdCategory
             // 衝突の時に動かないように設定する
             points.physicsBody?.isDynamic = false
-            
-            // スコアアップ用のノード
-            /* let scoreNode = SKNode()
-             scoreNode.position = CGPoint(x: upper.size.width + birdSize.width / 2, y: self.frame.height / 2)
-             scoreNode.physicsBody = SKPhysicsBody(rectangleOf: CGSize(width: upper.size.width, height: self.frame.size.height))
-             scoreNode.physicsBody?.isDynamic = false
-             scoreNode.physicsBody?.categoryBitMask = self.scoreCategory
-             scoreNode.physicsBody?.contactTestBitMask = self.birdCategory*/
             
             point.run(pointAnimation)
             
@@ -429,10 +400,10 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
             let location = touch.location(in: self)
             if self.atPoint(location).name == "button" {
                 print("button tapped")
-                if timelevel==4{
-                timelevel = 1
-                }else{
-                    timelevel=4
+                if timelevel == 4 {
+                    timelevel = 1
+                } else {
+                    timelevel = 4
                 }
                 print(timelevel)
             } else
